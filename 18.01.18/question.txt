@@ -1,0 +1,4 @@
+1. Factorial (while & for)
+2. Fibonacci series
+3. Display elements of list
+4. Reverse using inbuilt and without inbuilt
