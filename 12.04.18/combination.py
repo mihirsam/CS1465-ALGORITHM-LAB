@@ -18,9 +18,12 @@ def takeInput():
 def makeSet(valuesList, targetValue, count, targetList, tempIndex):
 
     if(sum(targetList) < targetValue):
-        targetList.append(valuesList[count])
-        count += 1
-        makeSet(valuesList, targetValue, count, targetList, tempIndex)
+        if(count > len(valuesList)-1):
+            delNode(valuesList, targetValue, count, targetList, tempIndex)
+        else:
+            targetList.append(valuesList[count])
+            count += 1
+            makeSet(valuesList, targetValue, count, targetList, tempIndex)
 
     elif(sum(targetList) == targetValue):
         print(targetList, end = ' ')
@@ -54,6 +57,7 @@ def delNode(valuesList, targetValue, count, targetList, tempIndex):
         count = 0
         targetList.pop(-1)
         targetList.append(valuesList[tempIndex])
+        count = 0
         makeSet(valuesList, targetValue, count, targetList, tempIndex)
 
 

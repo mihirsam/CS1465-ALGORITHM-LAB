@@ -1,3 +1,5 @@
+# Fractional Knapsack using recurssion
+
 node = []
 ratioList = []
 graph = {}
